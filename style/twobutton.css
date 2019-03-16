@@ -1,0 +1,24 @@
+.button {
+    border-color: green;
+    border-width: 2px;
+    background-color: #00cc00;
+    border-radius: 4px;
+    padding: 16px;
+    text-align: center;
+    margin: 0px 8px;
+}
+
+.next {
+    display: grid;
+    grid-template: 'button1 button2';
+    width: 748px;
+    margin: 0 auto;
+}
+
+#button1 {
+    grid-area: button1;
+}
+
+#button2 {
+    grid-area: button2;
+}

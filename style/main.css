@@ -1,0 +1,124 @@
+/* 
+    Color Palette:
+    #22252b - Background
+    #283237 - Foreground
+*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #22252b;
+    margin: 16px;
+    display: grid;
+    grid-template-areas:
+        'header'
+        'content'
+        'next'
+        'footer';
+    gap: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+.header, .body, .footer {
+    margin: 0px auto;
+    width: 700px;
+}
+
+.header, .body, .footer {
+    background-color: #283237;
+    border-radius: 4px;
+    padding: 16px;
+    color: white;
+}
+
+.header {
+    grid-area: header;
+}
+
+.content {
+    grid-area: content;
+}
+
+.next {
+    grid-area: next;
+    padding: 0 16px;
+}
+
+.footer {
+    grid-area: footer;
+    text-align: center;
+}
+
+.info {
+    margin: 16px 8px;
+    background-color: #00b4ff;
+    border: 2px;
+    border-color: #0082ff;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+@keyframes reveal {
+    0%      {
+                max-height: 0;
+                display: grid;
+            } 
+    25%     {max-height: 10%;}
+    75%     {max-height: 90%;}
+    100%    {max-height: 100%;}
+}
+
+@keyframes unreveal {
+    0%      {max-height: 100%;} 
+    25%     {max-height: 90%;}
+    75%     {max-height: 10%;}
+    100%    {max-height: 0%;}
+}
+
+.info .hidden {
+    display: none;
+    background-color: #0082ff;
+    margin: 8px;
+    padding: 8px;
+    max-height: 0;
+    animation-name: unreveal;
+    animation-duration: .3s
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.info:hover .hidden {
+    background-color: #0082ff;
+    margin: 8px;
+    padding: 8px;
+    max-height: 500px;
+    animation: .8s reveal;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.info p {
+    margin: 0;
+}
+
+p {
+    margin-bottom: 16px
+}
+
+.content p:last-child {
+    margin-bottom: 0px;
+}
+
+ol, ul {
+    padding: 0px 0px 0px 16px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer>a:hover {
+    text-decoration: underline;
+}
