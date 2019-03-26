@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>3DS Homebrew Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="style/twobutton.css">
+</head>
+<body>
+    <div class="header">
+        <a href="home.htm"><h1>3DS Homebrew Guide</h1></a>
+    </div>
+
+    <div class="content">
+        <div class="body">
+            <p>As stated earlier, you will need a flash cart in order to perform the ntrboot method. If you don't already have a flash cart, there is a useful table on <a href="https://3ds.hacks.guide/ntrboot">3DS Hacks Guide</a> that shows the pros and cons of various flash carts. Make sure that the one you pick is currently supported. If you do want to purchase one, it is highly reccomended to use <a href="http://nds-card.net">nds-card</a> as it is basically the only reputable seller. You can find certain flash carts listed on Amazon, but you might run the risk of purchasing a counterfeit card that may die while attampting this method.</p>
+
+            <div class="info">
+                <p>Make sure thatyou know the type of flash card you have before starting this section, it isnt that hard to tell but several manufacturers use similar branding. Additionally, if you want to restore your flash card to its orignal state after following this guide, please refer to the manufacturer's website if you want instructions on how to reset your flash cart.</p>
+            </div>
+
+            <p>Before beginning this section you need to perform a few tests, first of all make sure your flash cart works properly. Simply make sure it launches to the menu properly (You can also try launching an .nds file if you want to). Next, if you are not using an original 2DS, find a magnet and use it to test putting your system into sleep mode. The 2DS has a sleep switch and you have to use that instead. For the other models locate the area that triggers sleep mode by moving the magnet around the A B X Y buttons until the screens go black. Make sure that you can keep it in sleep mode for long enough to restart the system as that is all we need to trigger the payload once it is loaded on the SD card.</p>
+
+            <p>Next, we will begin the process of setting up Ntrboot. You will need to install a couple things first:</p>
+
+            <ul>
+                <li><a href="https://github.com/SciresM/boot9strap/releases/latest">Boot9strap</a> (the <code>ntr</code> version, not the <code>devkit</code> or <code>ntr-devkit</code> versions)</li>
+                <li><a href="https://github.com/jason0597/ntrboot_flasher_nds/releases/latest">Ntrboot Flasher</a></li>
+                <li><a href="https://github.com/d0k3/SafeB9SInstaller/releases/latest">SafeB9Installer</a></li>
+                <li><a href="https://github.com/AuroraWright/Luma3DS/releases/latest">Luma3DS</a></li>
+                <li><a href="https://github.com/fincs/new-hbmenu/releases/latest">The Homebrew Launcher</a></li>
+            </ul><p></p>
+
+            <p>Once these are downloaded, unzip the folders and put them in your <code>3DS</code> folder, preferrably in folders labling what they are. Make sure your device is off and open the flash cart SD card on the computer. Then, make a folder called <code>ntrboot</code> at the root of the SD card. Copy the <code>boot9strap_ntr.firm</code> file to the <code>ntrboot</code> folder. Copy the <code>ntrboot_flasher_nds.nds</code> file over to the root of the SD card.</p>
+
+            <p>Once that is all done, eject the SD card and put it back in the flash cart. Put the flash cart in your system, launch it, and open Ntrboot flasher. This will start the flashing process, which will overwrite the data on your SD card. If you would like to make a copy you can still close the flasher now and copy the data on the SD card to another backup folder in your <code>3DS</code> folder.</p>
+
+            <p>If you are ready to begin installing Ntrboot, press A to continue. Select the type of flash cart you have using the arrow buttons and the A button. Select "Dump flash" to make an additional backup of your flash cart on the SD card. Select your flash cart again and select "Inject FIRM" to start installing Boot9strap. Then turn the device off and continue to the next section to continue the installation.</p>
+        </div>
+    </div>
+
+    <div class="next">
+        <a href="home.htm">
+            <div class="button" id="button1">
+                Back
+            </div>
+        </a>
+
+        <a href="b9strap.htm">
+            <div class="button" id="button2">
+                Installing Boot9strap
+            </div>
+        </a>
+    </div>
+
+    <div class="footer">
+        <a href="https://www.jackmal.com">Home</a>
+        |
+        <a href="https://www.jackmal.com/about">About</a>
+        |
+        <a href="https://www.jackmal.com/contact">Contact</a>
+        |
+        Copyright Jack Malcom 2019
+    </div>
+</body>
+</html>

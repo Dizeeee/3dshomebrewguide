@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>3DS Homebrew Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="style/twobutton.css">
+</head>
+<body>
+    <div class="header">
+        <a href="home.htm"><h1>3DS Homebrew Guide</h1></a>
+    </div>
+
+    <div class="content">
+        <div class="body">
+            <p>This section will focus primarily on setting up Boot9strap. Keep the device turned off and instert the system SD card into your computer.</p>
+
+            <p>Copy <code>SafeB9SInstaller.firm</code> to the root of the SD card and rename it to <code>boot.firm</code>. Then copy <code>boot.3dsx</code> to the root. After both files are copied make a folder called <code>boot9strap</code> on the SD card. Copy <code>boot9strap.firm</code> and <code>boot9strap.firm.sha</code> into that folder on the SD card.</p>
+
+            <p>Once that is done, eject the SD card and insert it into the system. You can turn the sytem on to find the spot that puts the system in sleep mode now if you need to find it again. Once that is done turn the system off and start it holding Start, Select, X, Power for a few seconds. This might take a few tries to get right but when you do your system should show the SafeB9Installer menu.</p>
+
+            <p>Once all of the safety checks are done, you can take the device out of sleep mode, and enter the code to install boot9strap. After it installs, hold the power button to turn the system off. Remove the system SD card and insert it into your computer. Delete the <code>boot.firm</code> on the root of the SD card and replace it with the <code>boot.firm</code> from the Luma3DS files you downloaded earlier.</p>
+
+            <p>We are almost done, all the firmware we need is installed, so we just need to get some utilities installed to make the system useful:</p>
+
+            <ul>
+                <li><a href="https://github.com/astronautlevel2/Anemone3DS/releases/latest">Anemone3DS (cia file)</a></li>
+                <li><a href="https://github.com/FlagBrew/Checkpoint/releases/latest">Checkpoint (cia file)</a></li>
+                <li><a href="https://github.com/mariohackandglitch/homebrew_launcher_dummy/releases/latest">Homebrew Launcher Wrapper</a></li>
+                <li><a href="https://github.com/d0k3/GodMode9/releases/latest">GodMode9</a></li>
+                <li><a href="https://github.com/zoogie/DSP1/releases/latest">DSP1</a></li>
+                <li><a href="https://github.com/Steveice10/FBI/releases/latest">FBI (both cia and 3dsx files)</a></li>
+                <li><a href="https://github.com/ihaveamac/ctr-no-timeoffset/releases/latest">ctr-no-timeoffset</a></li>
+                <li><a href="https://github.com/KunoichiZ/lumaupdate/releases/latest">Luma3DS Updater (cia file)</a></li>
+            </ul><p></p>
+
+            <p>On the system SD card, make two folders on the root. Call one <code>3ds</code>, and the other one <code>cias</code>. Copy all of the cia files you downloaded into <code>cias</code>, and all of the 3sdx files into <code>3ds</code>. Make a third folder called <code>payloads</code> in the <code>luma</code> folder on your SD card, then copy <code>GodMode9.firm</code> into it. Then, copy the <code>gm9</code> folder from the GodMode9 folder onto the root of the SD card.</p>
+
+            <p>Insert the SD card into your system and restart the device. Open Download and Play on your system and press L, Down, and Select at the same time, this should open the Rosalina menu. Select “Miscellaneous options”, then "Switch the hb. title to the current app". Press B three times to exit the Rosalina menu. Restart Download and Play, it should launch the homebrew menu for now until we can make an icon on the home screen for it.</p>
+
+            <p>Scroll down and find ctr-no-timeoffset and launch it, then press A and Start. This makes some adjustments to the system clock the we will finalize in a bit. Once back in the Homebrew Launcher, find FBI in the menu and launch it. Select SD, then cias, then select "Install and delete all CIAs". You can now press home and close Download and Play.</p>
+
+            <p>You should have some new applications on your home screen, the first one you need to launch is DSP1. Let it run and press B when it is done to exit.</p>
+        </div>
+    </div>
+
+    <div class="next">
+        <a href="ntrboot.htm">
+            <div class="button" id="button1">
+                Back
+            </div>
+        </a>
+
+        <a href="finish.htm">
+            <div class="button" id="button2">
+                Finishing up
+            </div>
+        </a>
+    </div>
+
+    <div class="footer">
+        <a href="https://www.jackmal.com">Home</a>
+        |
+        <a href="https://www.jackmal.com/about">About</a>
+        |
+        <a href="https://www.jackmal.com/contact">Contact</a>
+        |
+        Copyright Jack Malcom 2019
+    </div>
+</body>
+</html>
